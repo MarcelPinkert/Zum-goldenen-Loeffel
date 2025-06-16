@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservierung</title>
+    <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #207c3c;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f4a261;
+    }
+    .hero {
+      background: url('images/restaurant-interior.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .cta-button {
+      background-color: #f4a261;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #e76f51;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+  <h1>Zum goldenen Löffel</h1>
+  <p>Traditionelle Küche seit 1952</p>
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="speisekarte.html">Speisekarte</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="reservierung.html">Reservierung</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+<form action="reservierung_absenden.php" method="post">
+  <fieldset>
+    <legend>Kontaktdaten</legend>
+    <label for="vorname">Vorname:</label>
+    <input type="text" id="vorname" name="vorname" required>
+    <label for="nachname">Nachname:</label>
+    <input type="text" id="nachname" name="nachname" required>
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reservierungsdetails</legend>
+    <label for="datum">Datum:</label>
+    <input type="date" id="datum" name="datum" required>
+    <label for="uhrzeit">Uhrzeit:</label>
+    <select id="uhrzeit" name="uhrzeit" required>
+      <option value="18:00">18:00</option>
+      <option value="19:00">19:00</option>
+      <!-- Weitere Zeiten hier -->
+    </select>
+    <label for="personen">Personen:</label>
+    <input type="number" id="personen" name="personen" min="1" max="10" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Anlass</legend>
+    <label><input type="radio" name="anlass" value="Geburtstag"> Geburtstag</label>
+    <label><input type="radio" name="anlass" value="Jubiläum"> Jubiläum</label>
+    <!-- Weitere Anlässe hier -->
+  </fieldset>
+
+  <fieldset>
+    <legend>Besondere Wünsche</legend>
+    <label><input type="checkbox" name="wunsch[]" value="vegetarisch"> Vegetarisch</label>
+    <label><input type="checkbox" name="wunsch[]" value="glutenfrei"> Glutenfrei</label>
+    <!-- Weitere Wünsche hier -->
+  </fieldset>
+
+  <fieldset>
+    <legend>Weitere Informationen</legend>
+    <label for="allergien">Allergien:</label>
+    <textarea id="allergien" name="allergien" placeholder="Bitte Allergien angeben"></textarea>
+    <label for="nachricht">Nachricht:</label>
+    <textarea id="nachricht" name="nachricht" placeholder="Weitere Wünsche oder Hinweise"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <label><input type="checkbox" name="agb" required> Ich habe die <a href="agb.html">AGB</a> gelesen und akzeptiere sie.</label>
+    <label><input type="checkbox" name="newsletter"> Ich möchte den Newsletter erhalten.</label>
+  </fieldset>
+
+  <button type="submit">Reservierung absenden</button>
+</form>
+    
+</body>
+</html>
