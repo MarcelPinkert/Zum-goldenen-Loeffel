@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speisekarte</title>
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #207c3c;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f4a261;
+    }
+    .hero {
+      background: url('images/restaurant-interior.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .cta-button {
+      background-color: #f4a261;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #e76f51;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+  <h1>Zum goldenen Löffel</h1>
+  <p>Traditionelle Küche seit 1952</p>
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="speisekarte.html">Speisekarte</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="reservierung.html">Reservierung</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="menu-section">
+    <h2>🍷 Getränke</h2>
+    <div class="menu-item"><span>1. Apfelwein</span><span>€3,50</span></div>
+    <div class="menu-item"><span>2. Helles Bier</span><span>€2,80</span></div>
+    <div class="menu-item"><span>3. Weißwein (trocken)</span><span>€4,20</span></div>
+    <div class="menu-item"><span>4. Rotwein (halbtrocken)</span><span>€4,50</span></div>
+    <div class="menu-item"><span>5. Mineralwasser (still)</span><span>€2,00</span></div>
+    <div class="menu-item"><span>6. Cola</span><span>€2,50</span></div>
+    <div class="menu-item"><span>7. Apfelsaft</span><span>€2,80</span></div>
+    <div class="menu-item"><span>8. Orangenlimonade</span><span>€2,60</span></div>
+    <div class="menu-item"><span>9. Espresso</span><span>€1,80</span></div>
+    <div class="menu-item"><span>10. Cappuccino</span><span>€2,50</span></div>
+  </div>
+
+  <div class="menu-section">
+    <h2>🥗 Vorspeisen</h2>
+    <div class="menu-item"><span>1. Tomatensuppe</span><span>€3,90</span></div>
+    <div class="menu-item"><span>2. Kürbiscremesuppe</span><span>€4,20</span></div>
+    <div class="menu-item"><span>3. Rinderkraftbrühe</span><span>€4,50</span></div>
+    <div class="menu-item"><span>4. Ziegenkäse-Crostini</span><span>€5,00</span></div>
+    <div class="menu-item"><span>5. Lachs-Tatar</span><span>€6,50</span></div>
+    <div class="menu-item"><span>6. Tomaten-Mozzarella</span><span>€5,80</span></div>
+    <div class="menu-item"><span>7. Geflügelterrine</span><span>€5,20</span></div>
+    <div class="menu-item"><span>8. Rinder-Carpaccio</span><span>€7,00</span></div>
+    <div class="menu-item"><span>9. Gemischter Salat</span><span>€4,00</span></div>
+    <div class="menu-item"><span>10. Bruschetta</span><span>€4,50</span></div>
+  </div>
+
+  <div class="menu-section">
+    <h2>🍽️ Hauptspeisen</h2>
+    <div class="menu-item"><span>1. Wiener Schnitzel</span><span>€12,50</span></div>
+    <div class="menu-item"><span>2. Rinderroulade</span><span>€14,80</span></div>
+    <div class="menu-item"><span>3. Zanderfilet</span><span>€16,00</span></div>
+    <div class="menu-item"><span>4. Schweinebraten</span><span>€13,50</span></div>
+    <div class="menu-item"><span>5. Kassler</span><span>€12,00</span></div>
+    <div class="menu-item"><span>6. Lammkoteletts</span><span>€18,00</span></div>
+    <div class="menu-item"><span>7. Rindersteak</span><span>€22,00</span></div>
+    <div class="menu-item"><span>8. Hähnchenbrust</span><span>€15,00</span></div>
+    <div class="menu-item"><span>9. Vegetarische Lasagne</span><span>€11,00</span></div>
+    <div class="menu-item"><span>10. Pilzrisotto</span><span>€12,50</span></div>
+    <div class="menu-item"><span>11. Schweinefilet</span><span>€14,80</span></div>
+    <div class="menu-item"><span>12. Forelle Müllerin Art</span><span>€16,50</span></div>
+    <div class="menu-item"><span>13. Rinderfilet</span><span>€25,00</span></div>
+    <div class="menu-item"><span>14. Entenbrust</span><span>€19,00</span></div>
+    <div class="menu-item"><span>15. Wildschweinbraten</span><span>€20,00</span></div>
+    <div class="menu-item"><span>16. Schweinehaxe</span><span>€17,50</span></div>
+    <div class="menu-item"><span>17. Kalbsmedaillons</span><span>€21,00</span></div>
+    <div class="menu-item"><span>18. Lachsfilet</span><span>€18,50</span></div>
+    <div class="menu-item"><span>19. Vegetarischer Burger</span><span>€11,50</span></div>
+    <div class="menu-item"><span>20. Kürbisgnocchi</span><span>€13,00</span></div>
+  </div>
+
+  <div class="menu-section">
+    <h2>🍰 Nachspeisen</h2>
+    <div class="menu-item"><span>1. Apfelstrudel</span><span>€4,50</span></div>
+    <div class="menu-item"><span>2. Schokoladenfondant</span><span>€5,00</span></div>
+    <div class="menu-item"><span>3. Tiramisu</span><span>€4,80</span></div>
+    <div class="menu-item"><span>4. Käsekuchen</span><span>€4,20</span></div>
+    <div class="menu-item"><span>5. Crème Brûlée</span><span>€5,50</span></div>
+    <div class="menu-item"><span>6. Panna Cotta</span><span>€4,80</span></div>
+    <div class="menu-item"><span>7. Mousse au Chocolat</span><span>€5,00</span></div>
+    <div class="menu-item"><span>8. Kaiserschmarrn</span><span>€6,00</span></div>
+    <div class="menu-item"><span>9. Erdbeer-Rhabarber-Crumble</span><span>€5,20</span></div>
+    <div class="menu-item"><span>10. Vanilleeis</span><span>€3,50</span></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Zum Goldenen Löffel | <a href="impressum.html" style="color: white;">Impressum</a> | <a href="datenschutz.html" style="color: white;">Datenschutz</a></p>
+  </footer>
+   
+    
+</body>
+</html>
