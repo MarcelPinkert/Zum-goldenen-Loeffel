@@ -1,65 +1,39 @@
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #8849499c; 
-  color: #333; /* Dunkles Grau für Text */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Kopfbereich (Header) */
-header {
-  background-color: #d4a373; /* Dezentes, warmes Braun */
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-/* Alle Bilder als Hintergrundbilder mit leichter Transparenz */
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  opacity: 0.7; /* 50% Transparenz */
-  object-fit: cover; /* Bild füllt den Container aus */
-  background-color: rgba(255, 255, 255, 0.5); /* Optional: Weißer Hintergrund mit 50% Transparenz */
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #fff; /* Weißer Text für Kontrast */
-}
-
-header p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #f0e5dc; /* Helles Beige */
-}
-
-/* Allgemeine Stile */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
 
 header {
-  background-color: #333;
-  color: white;
+  background-color: #003366;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
 }
 
 header h1 {
-  margin: 0;
   font-size: 2.5rem;
 }
 
 header p {
-  margin: 5px 0;
   font-size: 1.2rem;
+}
+
+
+nav {
+  background-color: #0055a5;
+  text-align: center;
+  padding: 10px 0;
 }
 
 nav ul {
@@ -69,94 +43,91 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 15px;
+  margin-right: 20px;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Flexbox-Container für die Speisekarten-Sektionen */
-.menu-section-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px 0;
-  padding: 0 20px;
-}
-
-/* Einzelne Sektionen */
-.menu-section {
-  width: 280px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10
-}
- 
-
-
-/* Navigation */
-nav {
-  margin-top: 15px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+nav ul li:last-child {
+  margin-right: 0;
 }
 
 nav a {
+  color: #fff;
   text-decoration: none;
-  color: #555; /* Dezentes Grau */
-  font-weight: 600;
-  transition: color 0.3s;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
-  color: #d4a373; /* Farbwechsel beim Hover */
+  text-decoration: underline;
 }
 
-/* Main-Bereich */
+
 main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff; /* Weißer Hintergrund für den Inhalt */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+article,
+aside {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h2,
+aside h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+article p,
+aside p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* Fußbereich (Footer) */
+
 footer {
-  background-color: #d4a373; /* Gleicher Farbton wie Header */
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #fff; /* Weißer Text */
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
+  background-color: #003366;
   color: #fff;
-  text-decoration: underline;
-  margin: 0 10px;
-  transition: color 0.3s;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-footer a:hover {
-  color: #f0e5dc; /* Heller Farbwechsel beim Hover */
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+
+  article h2 {
+    font-size: 2rem;
+  }
+
+  aside h2 {
+    font-size: 1.8rem;
+  }
 }
