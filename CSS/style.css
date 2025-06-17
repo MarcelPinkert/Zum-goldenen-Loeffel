@@ -1,0 +1,87 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5; /* Helles, dezentes Hintergrund */
+  color: #333; /* Dunkles Grau für Text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Kopfbereich (Header) */
+header {
+  background-color: #d4a373; /* Dezentes, warmes Braun */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #fff; /* Weißer Text für Kontrast */
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #f0e5dc; /* Helles Beige */
+}
+
+/* Navigation */
+nav {
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555; /* Dezentes Grau */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d4a373; /* Farbwechsel beim Hover */
+}
+
+/* Main-Bereich */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff; /* Weißer Hintergrund für den Inhalt */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+/* Fußbereich (Footer) */
+footer {
+  background-color: #d4a373; /* Gleicher Farbton wie Header */
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff; /* Weißer Text */
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #f0e5dc; /* Heller Farbwechsel beim Hover */
+}
