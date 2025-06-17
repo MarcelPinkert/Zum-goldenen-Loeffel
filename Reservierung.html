@@ -1,83 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de-DE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservierung</title>
-    <link rel="stylesheet" href="CSS/style.css"
-   
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <header>
-  <h1>Zum goldenen Löffel</h1>
-  <p>Rustikale und feine Küche für jeden!</p>
-  <nav>
-    <ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="speisekarte.html">Speisekarte</a></li>
-      <li><a href="reservierung.html">Reservierung</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="ueber-uns.html">Über uns</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
-</header>
-<form action="reservierung_absenden.php" method="post">
-  <fieldset>
-    <legend>Kontaktdaten</legend>
-    <label for="vorname">Vorname:</label>
-    <input type="text" id="vorname" name="vorname" required>
-    <label for="nachname">Nachname:</label>
-    <input type="text" id="nachname" name="nachname" required>
-    <label for="email">E-Mail:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="telefon">Telefon:</label>
-    <input type="tel" id="telefon" name="telefon" required>
-  </fieldset>
+        <h1>Zum goldenen Löffel</h1>
+        <p>Rustikale und feine Küche für jeden!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="speisekarte.html">Speisekarte</a></li>
+                <li><a href="reservierung.html">Reservierung</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <fieldset>
-    <legend>Reservierungsdetails</legend>
-    <label for="datum">Datum:</label>
-    <input type="date" id="datum" name="datum" required>
-    <label for="uhrzeit">Uhrzeit:</label>
-    <select id="uhrzeit" name="uhrzeit" required>
-      <option value="18:00">18:00</option>
-      <option value="19:00">19:00</option>
-      <!-- Weitere Zeiten hier -->
-    </select>
-    <label for="personen">Personen:</label>
-    <input type="number" id="personen" name="personen" min="1" max="10" required>
-  </fieldset>
+    <form action="reservierung_absenden.php" method="post">
+        <fieldset>
+            <legend>Kontaktdaten</legend>
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname" required>
+            <label for="nachname">Nachname:</label>
+            <input type="text" id="nachname" name="nachname" required>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+        </fieldset>
 
-  <fieldset>
-    <legend>Anlass</legend>
-    <label><input type="radio" name="anlass" value="Geburtstag"> Geburtstag</label>
-    <label><input type="radio" name="anlass" value="Jubiläum"> Jubiläum</label>
-    <!-- Weitere Anlässe hier -->
-  </fieldset>
+        <fieldset>
+            <legend>Reservierungsdetails</legend>
+            <label for="datum">Datum:</label>
+            <input type="date" id="datum" name="datum" required>
+            <label for="uhrzeit">Uhrzeit:</label>
+            <select id="uhrzeit" name="uhrzeit" required>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                
+            </select>
+            <label for="personen">Personen:</label>
+            <input type="number" id="personen" name="personen" min="1" max="10" required>
+        </fieldset>
 
-  <fieldset>
-    <legend>Besondere Wünsche</legend>
-    <label><input type="checkbox" name="wunsch[]" value="vegetarisch"> Vegetarisch</label>
-    <label><input type="checkbox" name="wunsch[]" value="glutenfrei"> Glutenfrei</label>
-    <!-- Weitere Wünsche hier -->
-  </fieldset>
+        <fieldset>
+            <legend>Anlass</legend>
+            <label><input type="radio" name="anlass" value="Geburtstag" required> Geburtstag</label>
+            <label><input type="radio" name="anlass" value="Jubiläum" required> Jubiläum</label>
+            
+        </fieldset>
 
-  <fieldset>
-    <legend>Weitere Informationen</legend>
-    <label for="allergien">Allergien:</label>
-    <textarea id="allergien" name="allergien" placeholder="Bitte Allergien angeben"></textarea>
-    <label for="nachricht">Nachricht:</label>
-    <textarea id="nachricht" name="nachricht" placeholder="Weitere Wünsche oder Hinweise"></textarea>
-  </fieldset>
+        <fieldset>
+            <legend>Besondere Wünsche</legend>
+            <label><input type="checkbox" name="wunsch[]" value="vegetarisch"> Vegetarisch</label>
+            <label><input type="checkbox" name="wunsch[]" value="glutenfrei"> Glutenfrei</label>
+            
+        </fieldset>
 
-  <fieldset>
-    <label><input type="checkbox" name="agb" required> Ich habe die <a href="agb.html">AGB</a> gelesen und akzeptiere sie.</label>
-    <label><input type="checkbox" name="newsletter"> Ich möchte den Newsletter erhalten.</label>
-  </fieldset>
+        <fieldset>
+            <legend>Weitere Informationen</legend>
+            <label for="allergien">Allergien:</label>
+            <textarea id="allergien" name="allergien" placeholder="Bitte Allergien angeben"></textarea>
+            <label for="nachricht">Nachricht:</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Weitere Wünsche oder Hinweise"></textarea>
+        </fieldset>
 
-  <button type="submit">Reservierung absenden</button>
-</form>
-    
+        <fieldset>
+            <label><input type="checkbox" name="agb" required> Ich habe die <a href="agb.html">AGB</a> gelesen und akzeptiere sie.</label>
+            <label><input type="checkbox" name="newsletter"> Ich möchte den Newsletter erhalten.</label>
+        </fieldset>
+
+        <button type="submit">Reservierung absenden</button>
+    </form>
+    <footer>
+        <p>&copy; 2025 Zum Goldenen Löffel | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
 </body>
 </html>
