@@ -189,7 +189,7 @@ nav a:hover {
 
 
 .contact-form {
-  max-width: 600px;
+  max-width: auto;
   margin: auto;
   background-color: #fff; 
   padding: 2rem; 
@@ -249,7 +249,7 @@ nav a:hover {
 
 /* Bilder */
 img {
-  max-width: 100%;
+  max-width: auto;
   height: auto;
   display: block;
   border-radius: 120px;
@@ -270,13 +270,13 @@ img.hover-zoom:hover {
 .image-left {
   float: center;
   margin-right: 1.5rem;
-  width: 100%;
+  width: auto;
 }
 
 .image-right {
   float: right;
   margin-left: 1.5rem;
-  width: 100%;
+  width: auto;
 }
 
 .image-center {
