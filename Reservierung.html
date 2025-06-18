@@ -9,21 +9,23 @@
 <body>
     <header>
         <h1>Zum goldenen Löffel</h1>
-        <p>Rustikale und feine Küche für jeden!</p>
+        <h2>Rustikale und feine Küche für jeden!<h2> 
+    </header>
+    <br>
         <nav>
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="speisekarte.html">Speisekarte</a></li>
-                <li><a href="reservierung.html">Reservierung</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="AGB.html">AGB</a></li>
+                <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
             </ul>
-        </nav>
-    </header>
-    <img src="bilder/Reservierung.jpg" alt="Bild mit einen Reserviert Schildchen" width="1200" height="400">
+        </nav> 
 
-    <form action="reservierung_absenden.php" method="post">
+    <img src="bilder/Reservierung.jpg" alt="Bild mit einen Reserviert Schildchen" width="1200" height="400">
+    <br>
         <fieldset>
             <legend>Kontaktdaten</legend>
             <label for="vorname">Vorname:</label>
@@ -35,7 +37,7 @@
             <label for="telefon">Telefon:</label>
             <input type="tel" id="telefon" name="telefon" required>
         </fieldset>
-
+<br>
         <fieldset>
             <legend>Reservierungsdetails</legend>
             <label for="datum">Datum:</label>
@@ -49,21 +51,21 @@
             <label for="personen">Personen:</label>
             <input type="number" id="personen" name="personen" min="1" max="10" required>
         </fieldset>
-
+<br>
         <fieldset>
             <legend>Anlass</legend>
             <label><input type="radio" name="anlass" value="Geburtstag" required> Geburtstag</label>
             <label><input type="radio" name="anlass" value="Jubiläum" required> Jubiläum</label>
             
         </fieldset>
-
+<br>
         <fieldset>
             <legend>Besondere Wünsche</legend>
             <label><input type="checkbox" name="wunsch[]" value="vegetarisch"> Vegetarisch</label>
             <label><input type="checkbox" name="wunsch[]" value="glutenfrei"> Glutenfrei</label>
             
         </fieldset>
-
+<br>
         <fieldset>
             <legend>Weitere Informationen</legend>
             <label for="allergien">Allergien:</label>
@@ -71,12 +73,12 @@
             <label for="nachricht">Nachricht:</label>
             <textarea id="nachricht" name="nachricht" placeholder="Weitere Wünsche oder Hinweise"></textarea>
         </fieldset>
-
+<br>
         <fieldset>
             <label><input type="checkbox" name="agb" required> Ich habe die <a href="agb.html">AGB</a> gelesen und akzeptiere sie.</label>
             <label><input type="checkbox" name="newsletter"> Ich möchte den Newsletter erhalten.</label>
         </fieldset>
-
+<br>
         <button type="submit">Reservierung absenden</button>
         
     </form>

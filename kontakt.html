@@ -9,25 +9,29 @@
 <body>
     <header>
         <h1>Zum goldenen Löffel</h1>
-        <p>Rustikale und feine Küche für jeden!</p>
-        <nav>
+        <h2>Rustikale und feine Küche für jeden!<h2>
+    </header>
+    <br>
+    <nav>
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="speisekarte.html">Speisekarte</a></li>
                 <li><a href="reservierung.html">Reservierung</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="AGB.html">AGB</a></li>
+                <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
             </ul>
-        </nav>
-    </header>
-
+        </nav>    
+    
     <main>
       <img src="bilder/Kontakt.jpg" alt="Bild einer Bar an der Menschen sitzen" width="1200" height="1000">
         <section>
             <h2>Kontaktieren Sie uns</h2>
+            <br>
             <p>Haben Sie Fragen oder möchten Sie eine Reservierung vornehmen? Wir freuen uns auf Ihre Nachricht!</p>
             <form action="mailto:info@zumgoldenenloeffel.de" method="post" enctype="text/plain">
+                <br>
                 <fieldset>
                     <legend>Ihre Kontaktdaten</legend>
                     <label for="name">Name:</label>
@@ -39,13 +43,13 @@
                     <label for="telefon">Telefon:</label>
                     <input type="tel" id="telefon" name="telefon" placeholder="Ihre Telefonnummer">
                 </fieldset>
-
+                <br>
                 <fieldset>
                     <legend>Ihre Nachricht</legend>
                     <label for="nachricht">Nachricht:</label>
                     <textarea id="nachricht" name="nachricht" rows="4" required placeholder="Ihre Nachricht..."></textarea>
                 </fieldset>
-
+                <br>
                 <fieldset>
                     <legend>Datenschutz</legend>
                     <label>
@@ -53,11 +57,11 @@
                         Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html">Datenschutzerklärung</a> zu.
                     </label>
                 </fieldset>
-
+            <br>
                 <button type="submit">Nachricht senden</button>
             </form>
         </section>
-
+            <br>
         <section>
             <h2>Unsere Kontaktdaten</h2>
             <p><strong>Adresse:</strong> Löffelstr. 123, 12345 Berlin</p>
@@ -70,9 +74,10 @@
                 <li>Feiertag – 14:00 – 22:00 Uhr</li>
             </ul>
         </section>
-
+            <br>
         <section>
             <h2>So finden Sie uns</h2>
+            <br>
             <p>Nutzen Sie die interaktive Karte, um uns zu finden:</p>
             <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=13.3888605%2C52.5170365%2C13.3976349%2C52.5200066&amp;layer=mapnik&amp;marker=52.518021%2C13.394278" width="600" height="450" style="border: 1px solid black;"></iframe>
         </section>
