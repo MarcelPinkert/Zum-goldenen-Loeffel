@@ -26,66 +26,96 @@
     <main>
         <div class=Restaurant-Foto>
           <img src="bilder/Kontakt.jpg" alt="Bild einer Bar an der Menschen sitzen">
-        </div class=Restaurant-Foto>
-            <h2>Kontaktieren Sie uns</h2>
+        </div class=Restaurant-Foto> 
             <br>
-            <p>Haben Sie Fragen oder möchten Sie eine Reservierung vornehmen? Wir freuen uns auf Ihre Nachricht!</p>
+            <h2>Haben Sie Fragen, wir freuen uns auf Ihre Nachricht!</h2>
+
             <form action="mailto:info@zumgoldenenloeffel.de" method="post" enctype="text/plain">
                 <br>
-                <fieldset>
-                    <legend>Ihre Kontaktdaten</legend>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Vor- und Nachname">
-                    <br>
-                    <label for="email">E-Mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse">
-                    <br>
-                    <label for="telefon">Telefon:</label>
-                    <input type="tel" id="telefon" name="telefon" placeholder="Ihre Telefonnummer">
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Ihre Nachricht</legend>
-                    <label for="nachricht">Nachricht:</label>
-                    <textarea id="nachricht" name="nachricht" rows="4" required placeholder="Ihre Nachricht..."></textarea>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Datenschutz</legend>
-                    <label>
-                        <input type="checkbox" name="datenschutz" required>
-                        Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html">Datenschutzerklärung</a> zu.
-                    </label>
-                </fieldset>
-            <br>
-                <button type="submit">Nachricht senden</button>
-            </form>
-        </section>
-            <br>
-        <section>
-            <h2>Unsere Kontaktdaten</h2>
-            <p><strong>Adresse:</strong> Löffelstr. 123, 12345 Berlin</p>
-            <p><strong>Telefon:</strong> +49 123 456789</p>
-            <p><strong>E-Mail:</strong> <a href="mailto:info@zumgoldenenloeffel.de">info@zumgoldenenloeffel.de</a></p>
-            <p><strong>Öffnungszeiten:</strong></p>
-            <ul>
-                <li>Montag – Freitag: 11:00 – 22:00 Uhr</li>
-                <li>Samstag – Sonntag: 12:00 – 23:00 Uhr</li>
-                <li>Feiertag – 14:00 – 22:00 Uhr</li>
-            </ul>
-        </section>
-            <br>
-        <section>
-            <h2>So finden Sie uns</h2>
-            <br>
-            <p>Nutzen Sie die interaktive Karte, um uns zu finden:</p>
-            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=13.3888605%2C52.5170365%2C13.3976349%2C52.5200066&amp;layer=mapnik&amp;marker=52.518021%2C13.394278" width="600" height="450" style="border: 1px solid black;"></iframe>
-        </section>
-    </main>
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <footer>
-        <p>&copy; 2025 Zum Goldenen Löffel | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
-    </footer>
+  <div class="contact-container">
+    <h1>Kontaktieren Sie uns</h1>
+    <p>Ob Fragen, Feedback oder Anfragen – wir sind für Sie da!</p>
+
+    <form action="kontakt-senden.php" method="POST">
+
+      <fieldset>
+        <legend>Persönliche Daten</legend>
+
+        <div class="form-group">
+          <label for="anrede">Anrede:</label>
+          <select id="anrede" name="anrede" required>
+            <option value="">Bitte wählen</option>
+            <option value="herr">Herr</option>
+            <option value="frau">Frau</option>
+            <option value="divers">Divers</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="vorname">Vorname:</label>
+          <input type="text" id="vorname" name="vorname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nachname">Nachname:</label>
+          <input type="text" id="nachname" name="nachname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail-Adresse:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefon">Telefon (optional):</label>
+          <input type="tel" id="telefon" name="telefon">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Anliegen</legend>
+
+        <div class="form-group">
+          <label for="betreff">Betreff:</label>
+          <select id="betreff" name="betreff" required>
+            <option value="">Bitte wählen</option>
+            <option value="reservierung">Reservierung</option>
+            <option value="feedback">Feedback</option>
+            <option value="beschwerde">Beschwerde</option>
+            <option value="frage">Allgemeine Frage</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nachricht">Ihre Nachricht:</label>
+          <textarea id="nachricht" name="nachricht" placeholder="Was möchten Sie uns mitteilen?" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Einverständnis</legend>
+        <div class="form-group-inline">
+          <label>
+            <input type="checkbox" name="datenschutz" required>
+            Ich akzeptiere die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>.
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Nachricht senden</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Zum goldenen Löffel &ndash; <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
 </body>
 </html>
 
