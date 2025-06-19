@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html  lang="de">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservierung</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
     <header>
         <h1>Zum goldenen Löffel</h1>
         <h2>Rustikale und feine Küche für jeden!</h2>
-
-        <nav>
+        <nav> 
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="speisekarte.html">Speisekarte</a></li>
@@ -23,116 +22,106 @@
             </ul>
         </nav>
     </header>
-<div class=Restaurant-Foto>
-   <img src="Bilder/Reservierung.jpg" alt="Bild mit einen Reserviert Schildchen">
-</div class=Restaurant-Foto>
-    <br>
-        <main class="reservation-container">
-    <h1>Reservierung</h1>
-    <p>Bitte fülle das Formular sorgfältig aus. Wir freuen uns auf deinen Besuch!</p>
+    <div class="Restaurant-Foto">
+        <img src="Bilder/Reservierung.jpg" alt="Bild mit einem Reserviert Schildchen">
+    </div>
 
-    <form action="reservierung-senden.php" method="post">
+    <main class="reservation-container">
+        <h1>Reservierung</h1>
+        <p>Bitte fülle das Formular sorgfältig aus. Wir freuen uns auf deinen Besuch!</p>
 
-      <fieldset>
-        <legend>📇 Kontaktdaten</legend>
+        <form action="reservierung-senden.php" method="post">
+            <fieldset>
+                <legend>📇 Kontaktdaten</legend>
+                <div class="form-group">
+                    <label for="vorname">Vorname:</label>
+                    <input type="text" id="vorname" name="vorname" required />
+                </div>
+                <div class="form-group">
+                    <label for="nachname">Nachname:</label>
+                    <input type="text" id="nachname" name="nachname" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefon:</label>
+                    <input type="tel" id="telefon" name="telefon" required />
+                </div>
+            </fieldset>
 
-        <div class="form-group">
-          <label for="vorname">Vorname:</label>
-          <input type="text" id="vorname" name="vorname" required />
-        </div>
+            <fieldset>
+                <legend>📅 Reservierungsdetails</legend>
+                <div class="form-group">
+                    <label for="datum">Datum:</label>
+                    <input type="date" id="datum" name="datum" required />
+                </div>
+                <div class="form-group">
+                    <label for="uhrzeit">Uhrzeit:</label>
+                    <select id="uhrzeit" name="uhrzeit" required>
+                        <option value="">– bitte wählen –</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="personen">Anzahl der Personen:</label>
+                    <input type="number" id="personen" name="personen" min="1" max="20" required />
+                </div>
+            </fieldset>
 
-        <div class="form-group">
-          <label for="nachname">Nachname:</label>
-          <input type="text" id="nachname" name="nachname" required />
-        </div>
+            <fieldset>
+                <legend>🎉 Anlass</legend>
+                <div class="form-group-inline">
+                    <label><input type="radio" name="anlass" value="Geburtstag" required> Geburtstag</label>
+                    <label><input type="radio" name="anlass" value="Jubiläum"> Jubiläum</label>
+                    <label><input type="radio" name="anlass" value="Geschäftlich"> Geschäftlich</label>
+                    <label><input type="radio" name="anlass" value="Sonstiges"> Sonstiges</label>
+                </div>
+            </fieldset>
 
-        <div class="form-group">
-          <label for="email">E-Mail:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+            <fieldset>
+                <legend>🍽️ Besondere Wünsche</legend>
+                <div class="form-group-inline">
+                    <label><input type="checkbox" name="wunsch[]" value="vegetarisch"> Vegetarisch</label>
+                    <label><input type="checkbox" name="wunsch[]" value="glutenfrei"> Glutenfrei</label>
+                    <label><input type="checkbox" name="wunsch[]" value="kinderstuhl"> Kinderstuhl</label>
+                    <label><input type="checkbox" name="wunsch[]" value="rollstuhlgerecht"> Rollstuhlgerecht</label>
+                </div>
+            </fieldset>
 
-        <div class="form-group">
-          <label for="telefon">Telefon:</label>
-          <input type="tel" id="telefon" name="telefon" required />
-        </div>
-      </fieldset>
+            <fieldset>
+                <legend>📝 Weitere Informationen</legend>
+                <div class="form-group">
+                    <label for="allergien">Allergien:</label>
+                    <textarea id="allergien" name="allergien" rows="2" placeholder="Bitte Allergien angeben"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="nachricht">Nachricht:</label>
+                    <textarea id="nachricht" name="nachricht" rows="4" placeholder="Weitere Wünsche oder Hinweise"></textarea>
+                </div>
+            </fieldset>
 
-      <fieldset>
-        <legend>📅 Reservierungsdetails</legend>
+            <fieldset>
+                <legend>✅ Zustimmung</legend>
+                <div class="form-group-inline">
+                    <label><input type="checkbox" name="agb" required> Ich akzeptiere die <a href="AGB.html" target="_blank">AGB</a>.</label>
+                    <label><input type="checkbox" name="newsletter"> Ich möchte den Newsletter erhalten.</label>
+                </div>
+            </fieldset>
 
-        <div class="form-group">
-          <label for="datum">Datum:</label>
-          <input type="date" id="datum" name="datum" required />
-        </div>
+            <div class="form-actions">
+                <button type="submit">Reservierung absenden</button>
+            </div>
+        </form>
+    </main>
 
-        <div class="form-group">
-          <label for="uhrzeit">Uhrzeit:</label>
-          <select id="uhrzeit" name="uhrzeit" required>
-            <option value="">– bitte wählen –</option>
-            <option value="17:00">17:00</option>
-            <option value="18:00">18:00</option>
-            <option value="19:00">19:00</option>
-            <option value="20:00">20:00</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="personen">Anzahl der Personen:</label>
-          <input type="number" id="personen" name="personen" min="1" max="20" required />
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>🎉 Anlass</legend>
-        <div class="form-group-inline">
-          <label><input type="radio" name="anlass" value="Geburtstag" required> Geburtstag</label>
-          <label><input type="radio" name="anlass" value="Jubiläum"> Jubiläum</label>
-          <label><input type="radio" name="anlass" value="Geschäftlich"> Geschäftlich</label>
-          <label><input type="radio" name="anlass" value="Sonstiges"> Sonstiges</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>🍽️ Besondere Wünsche</legend>
-        <div class="form-group-inline">
-          <label><input type="checkbox" name="wunsch[]" value="vegetarisch"> Vegetarisch</label>
-          <label><input type="checkbox" name="wunsch[]" value="glutenfrei"> Glutenfrei</label>
-          <label><input type="checkbox" name="wunsch[]" value="kinderstuhl"> Kinderstuhl</label>
-          <label><input type="checkbox" name="wunsch[]" value="rollstuhlgerecht"> Rollstuhlgerecht</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>📝 Weitere Informationen</legend>
-
-        <div class="form-group">
-          <label for="allergien">Allergien:</label>
-          <textarea id="allergien" name="allergien" rows="2" placeholder="Bitte Allergien angeben"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="nachricht">Nachricht:</label>
-          <textarea id="nachricht" name="nachricht" rows="4" placeholder="Weitere Wünsche oder Hinweise"></textarea>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>✅ Zustimmung</legend>
-        <div class="form-group-inline">
-          <label><input type="checkbox" name="agb" required> Ich akzeptiere die <a href="agb.html" target="_blank">AGB</a>.</label>
-          <label><input type="checkbox" name="newsletter"> Ich möchte den Newsletter erhalten.</label>
-        </div>
-      </fieldset>
-
-      <div class="form-actions">
-        <button type="submit">Reservierung absenden</button>
-      </div>
-    </form>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Zum Goldenen Löffel | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2025 Zum Goldenen Löffel | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
 </body>
 </html>
+
