@@ -55,12 +55,12 @@ img {
   filter: grayscale(0%);          
 }
 
-/* Hover-Effekt: z. B. leicht vergrößern und Farbeffekte */
+
 img:hover {
-  transform: scale(1.05);         /* Bild wird leicht größer */
+  transform: scale(1.05);         
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   filter: grayscale(10%) brightness(1.05);
-  border-color: #832e2e;          /* Rahmenfarbe wechselt */
+  border-color: #832e2e;          
 }
 
 body {
